@@ -82,7 +82,7 @@
       ]
     },
     {
-      "name": "DePIN Intergation",
+      "name": "DePIN Intergation test",
       "image": "/images/templates/depin.svg",
       "autoCollectionMetrics": true,
       "project": [
