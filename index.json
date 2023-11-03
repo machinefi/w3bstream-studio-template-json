@@ -1,0 +1,111 @@
+{
+  "templates": [
+    {
+      "name": "Hello World",
+      "image": "/images/templates/log.png",
+      "project": [
+        {
+          "name": "hello_world",
+          "description": "",
+          "applets": [
+            {
+              "wasmURL": "https://raw.githubusercontent.com/machinefi/w3bstream-wasm-assemblyscript-sdk/main/examples/wasms/log.wasm",
+              "appletName": "applet_01"
+            }
+          ],
+          "database": {
+            "schemas": [
+              {
+                "schemaName": "public",
+                "tables": [
+                  {
+                    "tableName": "t_demo",
+                    "tableSchema": "public",
+                    "comment": "demo table",
+                    "columns": [
+                      {
+                        "name": "f_id",
+                        "type": "int8",
+                        "isIdentity": true,
+                        "isNullable": false,
+                        "isUnique": false,
+                        "isPrimaryKey": true,
+                        "comment": "primary id"
+                      },
+                      {
+                        "name": "f_name",
+                        "type": "text",
+                        "defaultValue": "",
+                        "isIdentity": false,
+                        "isNullable": true,
+                        "isUnique": false,
+                        "isPrimaryKey": false,
+                        "comment": "name"
+                      },
+                      {
+                        "name": "f_amount",
+                        "type": "float8",
+                        "defaultValue": null,
+                        "isIdentity": false,
+                        "isNullable": true,
+                        "isUnique": false,
+                        "isPrimaryKey": false,
+                        "comment": "amount"
+                      },
+                      {
+                        "name": "f_income",
+                        "type": "numeric",
+                        "defaultValue": 0,
+                        "isIdentity": false,
+                        "isNullable": true,
+                        "isUnique": false,
+                        "isPrimaryKey": false,
+                        "comment": "income"
+                      }
+                    ],
+                    "relationships": []
+                  }
+                ]
+              }
+            ]
+          },
+          "envs": {
+            "env": [
+              [
+                "LOG_LEVEL",
+                "debug"
+              ]
+            ]
+          },
+          "datas": []
+        }
+      ]
+    },
+    {
+      "name": "DePIN Intergation",
+      "image": "/images/templates/depin.svg",
+      "autoCollectionMetrics": true,
+      "project": [
+        {
+          "name": "depin_intergation",
+          "description": "",
+          "applets": [
+            {
+              "wasmURL": "https://raw.githubusercontent.com/machinefi/w3bstream-wasm-assemblyscript-sdk/main/examples/wasms/log.wasm",
+              "appletName": "applet_01"
+            }
+          ],
+          "envs": {
+            "env": [
+              [
+                "LOG_LEVEL",
+                "debug"
+              ]
+            ]
+          },
+          "datas": []
+        }
+      ]
+    }
+  ]
+}
